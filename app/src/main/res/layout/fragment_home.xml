@@ -1,10 +1,423 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#5F5F5F"
+    android:scrollbars="none"
     tools:context=".HomeFragment">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ic_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_te"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ic_profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ic_logo"
+            app:layout_constraintBottom_toBottomOf="@id/ic_logo"/>
+
+        <HorizontalScrollView
+            android:id="@+id/sv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="32dp"
+            android:scrollbars="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_logo">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/banner1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/ic_kotak_banner"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/banner2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/ic_kotak_banner"
+                    app:layout_constraintStart_toEndOf="@id/banner1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/banner3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ic_kotak_banner"
+                    app:layout_constraintStart_toEndOf="@id/banner2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+        <View
+            android:id="@+id/bg_daily_motivation"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/bg_round_default"
+            android:backgroundTint="@color/abu_muda"
+            app:layout_constraintTop_toBottomOf="@id/sv_banner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ic_lamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_lamp"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toStartOf="@id/bg_daily_motivation"
+            app:layout_constraintTop_toTopOf="@id/bg_daily_motivation"
+            app:layout_constraintBottom_toBottomOf="@id/bg_daily_motivation"/>
+
+        <View
+            android:id="@+id/line_vertical"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/abu_tua"
+            app:layout_constraintStart_toEndOf="@id/ic_lamp"
+            app:layout_constraintTop_toTopOf="@id/ic_lamp"
+            app:layout_constraintBottom_toBottomOf="@id/ic_lamp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Contoh Text Daily Motivation (Randome Setiap Buka Aplikasi)"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toEndOf="@id/line_vertical"
+            app:layout_constraintTop_toTopOf="@id/bg_daily_motivation"
+            app:layout_constraintBottom_toBottomOf="@id/bg_daily_motivation"
+            app:layout_constraintEnd_toEndOf="@id/bg_daily_motivation"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/bg_white"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/round_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bg_daily_motivation"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_dot"
+            app:layout_constraintTop_toTopOf="@id/bg_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <View
+            android:id="@+id/btn_search_bar"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_round_default"
+            android:backgroundTint="@color/abu_muda"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_dot"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/text_search_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cari Referensi Skripsi"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_regular"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_search_bar"
+            app:layout_constraintBottom_toBottomOf="@id/btn_search_bar"/>
+
+        <TextView
+            android:id="@+id/tv_fitur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fitur Aplikasi :"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="21dp"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_search_bar"/>
+
+        <!--Layer 1 -->
+
+        <ImageView
+            android:id="@+id/btn_panduan_skripsi"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/bg_round_default"
+            android:backgroundTint="@color/abu_tua"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_pengajuan_topik"
+            app:layout_constraintTop_toBottomOf="@id/tv_fitur"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/abu_tua"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintStart_toEndOf="@id/tv_fitur"
+            app:layout_constraintTop_toTopOf="@id/tv_fitur"
+            app:layout_constraintBottom_toBottomOf="@id/tv_fitur"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_panduan_skripsi"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/btn_panduan_skripsi"
+            app:layout_constraintTop_toTopOf="@id/btn_panduan_skripsi"
+            app:layout_constraintBottom_toBottomOf="@id/btn_panduan_skripsi"/>
+
+        <View
+            android:id="@+id/btn_pengajuan_topik"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_round_default"
+            android:backgroundTint="@color/abu_muda"
+            app:layout_constraintStart_toEndOf="@id/btn_panduan_skripsi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_panduan_skripsi"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_pengajuan_topik"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="@id/btn_pengajuan_topik"
+            app:layout_constraintTop_toTopOf="@id/btn_pengajuan_topik"
+            app:layout_constraintBottom_toBottomOf="@id/btn_pengajuan_topik"/>
+
+        <!--Layer 2-->
+
+        <View
+            android:id="@+id/btn_arsip_digital"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_round_default"
+            android:backgroundTint="@color/abu_muda"
+            app:layout_constraintStart_toEndOf="@id/btn_panduan_skripsi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_panduan_skripsi"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arsip Digital"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="@id/btn_arsip_digital"
+            app:layout_constraintTop_toTopOf="@id/btn_arsip_digital"
+            app:layout_constraintBottom_toBottomOf="@id/btn_arsip_digital"/>
+
+        <!--Layer 3-->
+
+        <ImageView
+            android:id="@+id/btn_daftar_dosen"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_round_default"
+            android:backgroundTint="@color/abu_muda"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintEnd_toStartOf="@id/btn_kontak_jurusan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_arsip_digital" />
+
+        <TextView
+            android:id="@+id/tv_daftar_dosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar Dosen"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="@id/btn_daftar_dosen"
+            app:layout_constraintTop_toTopOf="@id/btn_daftar_dosen"
+            app:layout_constraintBottom_toTopOf="@id/iv_daftar_dosen"/>
+
+        <ImageView
+            android:id="@+id/iv_daftar_dosen"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/ic_more_dosen"
+            app:layout_constraintBottom_toBottomOf="@id/btn_daftar_dosen"
+            app:layout_constraintStart_toStartOf="@id/tv_daftar_dosen"
+            app:layout_constraintTop_toBottomOf="@id/tv_daftar_dosen" />
+
+        <View
+            android:id="@+id/btn_kontak_jurusan"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_round_default"
+            android:backgroundTint="@color/abu_muda"
+            app:layout_constraintStart_toEndOf="@id/btn_daftar_dosen"
+            app:layout_constraintEnd_toStartOf="@id/btn_metode_penelitian"
+            app:layout_constraintTop_toTopOf="@id/btn_daftar_dosen"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_kontak_jurusan"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="@id/btn_kontak_jurusan"
+            app:layout_constraintTop_toTopOf="@id/btn_kontak_jurusan"
+            app:layout_constraintBottom_toBottomOf="@id/btn_kontak_jurusan"/>
+
+        <View
+            android:id="@+id/btn_metode_penelitian"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_round_default"
+            android:backgroundTint="@color/abu_muda"
+            app:layout_constraintStart_toEndOf="@id/btn_kontak_jurusan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_daftar_dosen"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_metode_penelitian"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="@id/btn_metode_penelitian"
+            app:layout_constraintTop_toTopOf="@id/btn_metode_penelitian"
+            app:layout_constraintBottom_toBottomOf="@id/btn_metode_penelitian"/>
+
+
+        <ImageView
+            android:id="@+id/bg_timeline"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_marginTop="54dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/rectangle_timeline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_daftar_dosen" />
+
+        <TextView
+            android:id="@+id/tv_title_timeline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timeline Skripsi"
+            android:textSize="16dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="@drawable/bg_round_default"
+            android:backgroundTint="@color/abu_tua"
+            android:textColor="@color/white"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bg_timeline"/>
+
+        <ImageView
+            android:id="@+id/iv_progres_timeline"
+            android:layout_width="367dp"
+            android:layout_height="163dp"
+            android:src="@drawable/ic_tahapan"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_timeline" />
+
+        <TextView
+            android:id="@+id/btn_title_timeline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lihat Selengkapnya"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="@drawable/bg_round_default"
+            android:backgroundTint="@color/abu_mid"
+            android:textColor="@color/white"
+            android:paddingVertical="16dp"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_progres_timeline"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/development_by"
+            android:textAlignment="center"
+            android:textSize="10dp"
+            android:layout_marginVertical="34dp"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bg_timeline"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
