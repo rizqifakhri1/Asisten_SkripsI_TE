@@ -273,7 +273,7 @@
 
         <ImageView
             android:id="@+id/btn_daftar_dosen"
-            android:layout_width="0dp"
+            android:layout_width="140dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
@@ -324,8 +324,8 @@
             android:layout_height="wrap_content"
             android:text="@string/text_kontak_jurusan"
             android:fontFamily="@font/montserrat_bold"
-            android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="@id/btn_kontak_jurusan"
+            app:layout_constraintEnd_toEndOf="@id/btn_kontak_jurusan"
             app:layout_constraintTop_toTopOf="@id/btn_kontak_jurusan"
             app:layout_constraintBottom_toBottomOf="@id/btn_kontak_jurusan"/>
 
@@ -345,9 +345,9 @@
             android:layout_height="wrap_content"
             android:text="@string/text_metode_penelitian"
             android:fontFamily="@font/montserrat_bold"
-            android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="@id/btn_metode_penelitian"
             app:layout_constraintTop_toTopOf="@id/btn_metode_penelitian"
+            app:layout_constraintEnd_toEndOf="@id/btn_metode_penelitian"
             app:layout_constraintBottom_toBottomOf="@id/btn_metode_penelitian"/>
 
 
