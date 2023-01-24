@@ -10,4 +10,14 @@
         android:name="com.rizqifakhri.asistenskripsite.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/pengajuanDosenSideFragment"
+        android:name="com.rizqifakhri.asistenskripsite.PengajuanDosenSideFragment"
+        android:label="fragment_pengajuan_dosen_side"
+        tools:layout="@layout/fragment_pengajuan_dosen_side" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.rizqifakhri.asistenskripsite.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
 </navigation>

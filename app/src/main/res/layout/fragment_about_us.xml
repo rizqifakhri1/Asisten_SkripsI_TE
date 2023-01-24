@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abu_tua"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AboutUsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_logo_te"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/logo_te_only"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_logo_te"
+            app:layout_constraintBottom_toBottomOf="@id/iv_logo_te"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="About Us"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo_te"/>
+
+
+        <ImageView
+            android:id="@+id/bg_white"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/round_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <ImageView
+            android:id="@+id/iv_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_dot"
+            app:layout_constraintTop_toTopOf="@id/bg_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_tentang_aplikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tentang Aplikasi"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginTop="32dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_dot"/>
+
+        <TextView
+            android:id="@+id/tv_desc_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:justificationMode="inter_word"
+            android:text="Deskirpsi mengenai aplikasi, background pembuatan / latar belakang, dan teknologi yang digunakan misal text mining, dan menggunakan apa dalam mendevelop ini"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tentang_aplikasi"/>
+
+        <TextView
+            android:id="@+id/tv_develop_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Develop By :"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginTop="32dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc_app"/>
+
+
+        <!--Bio Mahasiswa-->
+
+        <ImageView
+            android:id="@+id/bg_mahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@drawable/bg_round_default"
+            android:backgroundTint="@color/abu_tua"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_develop_by"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_mahasiswa"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/people"
+            app:layout_constraintBottom_toBottomOf="@id/bg_mahasiswa"
+            app:layout_constraintStart_toStartOf="@id/bg_mahasiswa" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_te_only"
+            app:layout_constraintStart_toEndOf="@id/iv_mahasiswa"
+            app:layout_constraintTop_toTopOf="@id/bg_mahasiswa"
+            app:layout_constraintBottom_toBottomOf="@id/bg_mahasiswa"
+            app:layout_constraintEnd_toEndOf="@id/bg_mahasiswa"/>
+
+        <TextView
+            android:id="@+id/tv_nama_mahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Muhammad Rizqi Fakhri Kurniawan"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bg_mahasiswa"/>
+
+        <TextView
+            android:id="@+id/tv_nim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIM : 5302419020 | PTIK 2019"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toStartOf="@id/tv_nama_mahasiswa"
+            app:layout_constraintTop_toBottomOf="@id/tv_nama_mahasiswa"/>
+
+        <TextView
+            android:id="@+id/tv_email_mahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rizqifakhri@gmail.com"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toStartOf="@id/tv_nama_mahasiswa"
+            app:layout_constraintTop_toBottomOf="@id/tv_nim"/>
+
+        <TextView
+            android:id="@+id/tv_linkedin_mahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Linkedin : Rizqi Fakhri"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/abu_tua"
+            android:layout_marginTop="6dp"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="12dp"
+            android:background="@drawable/bg_round_default"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toStartOf="@id/tv_nama_mahasiswa"
+            app:layout_constraintTop_toBottomOf="@id/tv_email_mahasiswa"/>
+
+        <!--Bio Dosen-->
+
+        <!--Bio Mahasiswa-->
+
+        <ImageView
+            android:id="@+id/bg_dosen"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@drawable/bg_round_default"
+            android:backgroundTint="@color/abu_tua"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_linkedin_mahasiswa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_dosen"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/people"
+            app:layout_constraintBottom_toBottomOf="@id/bg_dosen"
+            app:layout_constraintStart_toStartOf="@id/bg_dosen" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_te_only"
+            app:layout_constraintStart_toEndOf="@id/iv_dosen"
+            app:layout_constraintTop_toTopOf="@id/bg_dosen"
+            app:layout_constraintBottom_toBottomOf="@id/bg_dosen"
+            app:layout_constraintEnd_toEndOf="@id/bg_dosen"/>
+
+        <TextView
+            android:id="@+id/tv_nama_dosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Dr. Feddy Setio Pribadi, M.T."
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bg_dosen"/>
+
+        <TextView
+            android:id="@+id/tv_nip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIP : 132303192"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toStartOf="@id/tv_nama_dosen"
+            app:layout_constraintTop_toBottomOf="@id/tv_nama_dosen"/>
+
+        <TextView
+            android:id="@+id/tv_email_dosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feddy.setio@mail.unnes.ac.id"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toStartOf="@id/tv_nama_dosen"
+            app:layout_constraintTop_toBottomOf="@id/tv_nip"/>
+
+        <TextView
+            android:id="@+id/tv_linkedin_dosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Linkedin : Feddy Setio Pribadi"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/abu_tua"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="64dp"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="12dp"
+            android:background="@drawable/bg_round_default"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toStartOf="@id/tv_nama_dosen"
+            app:layout_constraintTop_toBottomOf="@id/tv_email_dosen"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>
