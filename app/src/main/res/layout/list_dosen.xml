@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_profil_dosen"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:src="@drawable/profile_dosen"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_nama_dosen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nama Dosen"
+        android:textSize="14sp"
+        android:layout_marginStart="18dp"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintStart_toEndOf="@id/iv_profil_dosen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_profil_dosen"/>
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tag Keahlian Dosen"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:layout_marginTop="6dp"
+        android:textSize="10sp"
+        android:background="@drawable/bg_round_default"
+        android:backgroundTint="@color/abu_mid_terang"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintStart_toStartOf="@id/tv_nama_dosen"
+        app:layout_constraintTop_toBottomOf="@id/tv_nama_dosen"/>
+
+    <ImageView
+        android:id="@+id/iv_sperator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="#BCBCBC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_profil_dosen"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

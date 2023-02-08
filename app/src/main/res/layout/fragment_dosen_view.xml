@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abu_tua"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DosenViewFragment">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <ImageView
+          android:id="@+id/iv_logo_te"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="24dp"
+          android:src="@drawable/logo_te_only"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="32dp"
+          android:src="@drawable/ic_back"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@id/iv_logo_te"
+          app:layout_constraintBottom_toBottomOf="@id/iv_logo_te"/>
+
+
+      <ImageView
+          android:id="@+id/bg_white"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_marginTop="32dp"
+          android:background="@drawable/round_bg"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/iv_logo_te"
+          app:layout_constraintBottom_toBottomOf="parent"/>
+
+      <ImageView
+          android:id="@+id/iv_dot"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:background="@drawable/ic_dot"
+          app:layout_constraintTop_toTopOf="@id/bg_white"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"/>
+
+      <ImageView
+          android:id="@+id/iv_bio_photo_dosen"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="16dp"
+          android:src="@drawable/profile_dosen"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/iv_dot" />
+
+      <TextView
+          android:id="@+id/tv_bio_nama_dosen"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:layout_marginHorizontal="16dp"
+          android:text="Nama Dosen"
+          android:fontFamily="@font/montserrat_bold"
+          android:textSize="24sp"
+          app:layout_constraintStart_toEndOf="@id/iv_bio_photo_dosen"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="@id/iv_bio_photo_dosen"/>
+
+      <TextView
+          android:id="@+id/tv_bio_nip_dosen"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="16dp"
+          android:layout_marginTop="8dp"
+          android:text="NIP. 123456789"
+          android:fontFamily="@font/montserrat_regular"
+          app:layout_constraintStart_toStartOf="@id/tv_bio_nama_dosen"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/tv_bio_nama_dosen"/>
+
+      <TextView
+          android:id="@+id/tv_bio_email_dosen"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="16dp"
+          android:layout_marginTop="8dp"
+          android:text="emaildosen@unnes.ac.id"
+          android:fontFamily="@font/montserrat_regular"
+          app:layout_constraintStart_toStartOf="@id/tv_bio_nama_dosen"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/tv_bio_nip_dosen"/>
+
+      <TextView
+          android:id="@+id/tv_bio_prodi_dosen"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="16dp"
+          android:layout_marginTop="8dp"
+          android:text="Handle Prodi ex : PTIK"
+          android:fontFamily="@font/montserrat_regular"
+          app:layout_constraintStart_toStartOf="@id/tv_bio_nama_dosen"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/tv_bio_email_dosen"/>
+
+      <TextView
+          android:id="@+id/tv_bio_bidang_dosen"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="16dp"
+          android:layout_marginTop="16dp"
+          android:background="@drawable/dot_round_corner"
+          android:backgroundTint="@color/abu_muda"
+          android:padding="12dp"
+          android:text="Bidang Keahlian 1, Bidang Keahlian 2, Bidang Keahlian 3, Bidang Keahlian 4..."
+          android:fontFamily="@font/montserrat_regular"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/tv_bio_prodi_dosen"/>
+
+      <ImageView
+          android:id="@+id/iv_sperator"
+          android:layout_width="0dp"
+          android:layout_height="1dp"
+          android:background="#BCBCBC"
+          android:layout_marginHorizontal="16dp"
+          android:layout_marginTop="22dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/tv_bio_bidang_dosen"/>
+
+      <TextView
+          android:id="@+id/title_topik"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="22dp"
+          android:layout_marginStart="16dp"
+          android:textSize="16sp"
+          android:text="Topik yang di ajukan"
+          android:fontFamily="@font/montserrat_bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/iv_sperator"/>
+
+      <TextView
+          android:id="@+id/iv_bio_kata_kunci"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="16dp"
+          android:layout_marginTop="6dp"
+          android:text="Kata Kunci Yang Di masukan "
+          app:layout_constraintTop_toBottomOf="@id/title_topik"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"/>
+
+      <TextView
+          android:id="@+id/btn_pengajuan_dosen"
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_marginHorizontal="16dp"
+          android:layout_marginTop="16dp"
+          android:text="Ajukan Topik &amp; Dosen"
+          android:fontFamily="@font/montserrat_bold"
+          android:textColor="@color/white"
+          android:gravity="center"
+          android:background="@drawable/bg_round_default"
+          android:backgroundTint="@color/abu_tua"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/iv_bio_kata_kunci"
+          app:layout_constraintEnd_toEndOf="parent"/>
+
+      <ImageView
+          android:id="@+id/iv_sperator_dua"
+          android:layout_width="0dp"
+          android:layout_height="1dp"
+          android:background="#BCBCBC"
+          android:layout_marginHorizontal="16dp"
+          android:layout_marginTop="22dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/btn_pengajuan_dosen"/>
+
+      <TextView
+          android:id="@+id/title_riwayat"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="22dp"
+          android:layout_marginStart="16dp"
+          android:textSize="16sp"
+          android:text="Riwayat Bimbingan Dosen"
+          android:fontFamily="@font/montserrat_bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/iv_sperator_dua"/>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="16dp"
+          android:layout_marginStart="32dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="32dp"
+          tools:listitem="@layout/dosen_riwayat_bimbingan"
+          app:layout_constraintTop_toBottomOf="@id/title_riwayat"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</ScrollView>

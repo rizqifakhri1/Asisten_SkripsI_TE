@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_dot_riwayat"
+        android:layout_width="21dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/dot_round_corner"
+        android:backgroundTint="@color/abu_mid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_judul_riwayat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Judul Riwayat Skripsi yang pernah di ampu"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_dot_riwayat"
+        app:layout_constraintTop_toTopOf="@id/iv_dot_riwayat"
+        app:layout_constraintBottom_toBottomOf="@id/iv_dot_riwayat"/>
+
+    <ImageView
+        android:id="@+id/iv_star_dots_one"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/dot_line"
+        app:layout_constraintTop_toBottomOf="@id/iv_dot_riwayat"
+        app:layout_constraintBottom_toTopOf="@id/iv_star_dots_two"
+        app:layout_constraintStart_toStartOf="@id/iv_dot_riwayat"
+        app:layout_constraintEnd_toEndOf="@id/iv_dot_riwayat"/>
+
+    <ImageView
+        android:id="@+id/iv_star_dots_two"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/dot_line"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="@id/iv_dot_riwayat"
+        app:layout_constraintEnd_toEndOf="@id/iv_dot_riwayat"
+        app:layout_constraintTop_toBottomOf="@id/iv_star_dots_one"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

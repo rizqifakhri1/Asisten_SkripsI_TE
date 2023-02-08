@@ -25,4 +25,29 @@
         android:name="com.rizqifakhri.asistenskripsite.JurusanContactFragment"
         android:label="fragment_jurusan_contact"
         tools:layout="@layout/fragment_jurusan_contact" />
+    <fragment
+        android:id="@+id/panduanSkripsiFragment"
+        android:name="com.rizqifakhri.asistenskripsite.PanduanSkripsiFragment"
+        android:label="fragment_panduan_skripsi"
+        tools:layout="@layout/fragment_panduan_skripsi" />
+    <fragment
+        android:id="@+id/arsipDigital"
+        android:name="com.rizqifakhri.asistenskripsite.ArsipDigital"
+        android:label="fragment_arsip_digital"
+        tools:layout="@layout/fragment_arsip_digital" />
+    <fragment
+        android:id="@+id/searchArsipFragment"
+        android:name="com.rizqifakhri.asistenskripsite.SearchArsipFragment"
+        android:label="fragment_search_arsip"
+        tools:layout="@layout/fragment_search_arsip" />
+    <fragment
+        android:id="@+id/dosenViewFragment"
+        android:name="com.rizqifakhri.asistenskripsite.DosenViewFragment"
+        android:label="fragment_dosen_view"
+        tools:layout="@layout/fragment_dosen_view" />
+    <fragment
+        android:id="@+id/detailSkripsiFragment"
+        android:name="com.rizqifakhri.asistenskripsite.DetailSkripsiFragment"
+        android:label="fragment_detail_skripsi"
+        tools:layout="@layout/fragment_detail_skripsi" />
 </navigation>
